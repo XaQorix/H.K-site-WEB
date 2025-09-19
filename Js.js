@@ -1,12 +1,11 @@
 let data = JSON.parse(localStorage.getItem("score_hk"))
-if(!data) {
-    data = {
-        score: 0
-    }
-}
-
 const div = document.getElementById("nombre")
 let clickamount = data.score;
+
+
+if(!data) {clickamount = 0}
+
+div.textContent = clickamount
 
 function save() {
     const json = {
